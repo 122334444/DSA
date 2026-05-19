@@ -12,8 +12,8 @@ public class nextGreaterOnRight {
         ans[n - 1] = -1;
 
         for (int i = n - 2; i >= 0; i--) {
-            while (s.size() > 0 && arr[i] >= s.peek()) {// jab koi bada mil jayega tab ruk jayga aur usko assogn kar//
-                                                        // dega
+            while (s.size() > 0 && arr[i] >= s.peek()) {// jab koi bada mil jayega tab ruk jayga aur usko assogn
+                                                        // kar/dega
                 s.pop();
             }
 
