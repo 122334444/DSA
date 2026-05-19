@@ -12,7 +12,7 @@ public class largestAreaHistogram {
         sl.push(0);
         lb[0] = -1;
         for (int i = 1; i < n; i++) {
-            while (sl.size() > 0 && arr[i] < arr[sl.peek()]) {
+            while (sl.size() > 0 && arr[i] <= arr[sl.peek()]) {
                 sl.pop();
             }
             if (sl.size() == 0) {
@@ -28,7 +28,7 @@ public class largestAreaHistogram {
         Stack<Integer> s = new Stack<>();
         rb[n - 1] = n;
         for (int i = n - 2; i > -0; i--) {
-            while (s.size() > 0 && arr[i] < arr[s.peek()]) {
+            while (s.size() > 0 && arr[i] <= arr[s.peek()]) {
                 s.pop();
             }
             if (s.size() == 0) {
