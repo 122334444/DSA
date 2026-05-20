@@ -89,6 +89,29 @@ public class implemetation {
         }
     }
 
+    // USING QUEUE
+    public Queue<Integer> q = new LinkedList<>();
+
+    public void push(int x) {
+        int n = q.size();
+        q.add(x);
+        for (int i = 0; i < n; i++) {
+            q.add(q.remove());
+        }
+    }
+
+    public int pop() {
+        return q.remove();
+    }
+
+    public int top() {
+        return q.peek();
+    }
+
+    public boolean empty() {
+        return q.size() == 0;
+    }
+
     public static void main(String args[]) {
         // Stack s = new Stack();
         // s.push(0);
