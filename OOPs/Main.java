@@ -1,5 +1,7 @@
 package OOPs;
 
+import DP.dpOnSubsequences.partitionEqualSumSuset;
+
 //SWAP GAME
 public class Main {
 
@@ -10,12 +12,25 @@ public class Main {
         void saysHi() {
             System.out.println(name + "[ " + age + " ] Syas Hi!");
         }
+
+        // in java constructor will be by default if you forget to make
+        Person() {
+            // without parameter-> Default
+        }
+
+        Person(int age, String name) {// paraneterized construvtor
+            this.age = age;
+            this.name = name;
+        }
     }
 
     public static void main(String args[]) {
         Person p1 = new Person();// Person -> class , p1 -> object
         p1.age = 20;
         p1.name = "Vikrant Yadav";
+
+        Person p3 = new Person(20, "Aadi");// paraneterized construvtor used
+        p3.saysHi();
 
         Person p2 = new Person();// Person -> class , p1 -> object
         p2.age = 18;
