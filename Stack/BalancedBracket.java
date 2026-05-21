@@ -24,7 +24,7 @@ public class BalancedBracket {
                 stack.pop();
             }
         }
-        return true;
+        return stack.size() == 0;
     }
 
     public static void main(String args[]) {
