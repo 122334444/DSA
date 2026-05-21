@@ -1,6 +1,6 @@
 package Stack;
 
-public class infixToPostfix {
+public class waterTrap {
 
     public static int trap(int[] height) {
         int n = height.length;
