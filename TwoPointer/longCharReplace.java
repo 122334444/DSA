@@ -1,6 +1,7 @@
 package TwoPointer;
 
 //LeetCode: 424
+
 public class longCharReplace {
     public int characterReplacement(String s, int k) {
         int l = 0, r = 0;

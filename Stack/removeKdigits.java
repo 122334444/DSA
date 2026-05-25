@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.*;
 
-//LEETCODE 402 -> return the smallest possible integer after removing k digits from num
+//LEETCODE 402 -> return the smallest possible integer after removing k digits from num(String)
 
 public class removeKdigits {
     public static String removeK_digits(String num, int k) {
