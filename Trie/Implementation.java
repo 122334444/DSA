@@ -69,6 +69,5 @@ public class Implementation {
         t.insert("app");
         System.out.println(t.search("app"));
         System.out.println(t.startsWith("app"));
-
     }
 }
