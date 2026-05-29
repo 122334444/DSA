@@ -14,9 +14,9 @@ public class DesignAndSearch {
         }
     }
 
-    private final Node root;
+    private Node root;
 
-    public WordDictionary() {
+    public void WordDictionary() {
         root = new Node();
     }
 

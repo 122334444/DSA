@@ -12,7 +12,6 @@ public class Implementation {
 
             Node() {
                 childs = new Node[26];
-
             }
         }
 
