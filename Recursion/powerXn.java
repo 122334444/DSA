@@ -21,7 +21,6 @@ public class powerXn {
 
     public static void main(String argsp[]) {
         int x = 5;
-
         int n = 12;
         System.out.println(pow(x, n));
     }
