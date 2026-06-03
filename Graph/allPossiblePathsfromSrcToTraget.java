@@ -3,6 +3,7 @@ package Graph;
 import java.util.*;
 
 class allPossiblePathsfromSrcToTarget {
+
     static class Edge {
         int src;
         int dest;
@@ -13,41 +14,40 @@ class allPossiblePathsfromSrcToTarget {
         }
     }
 
-    public static void createGraph(ArrayList<Edge> graph[], int paths[][]) {
+    private static void createGraph(int paths[][], ArrayList<Edge> graph[]) {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
         }
+
         for (int f[] : paths) {
-            int src = f[0], dest = f[1];
-            graph[src].add(new Edge(src, dest));
+            int s = f[0], d = f[1];
+            graph[s].add(new Edge(s, d));
+            graph[d].add(new Edge(d, s));
         }
     }
 
-    public static void printAllPath(ArrayList<Edge> graph[], boolean vis[], int curr, int target, String path) {
-
+    private static void allPath(ArrayList<Edge> graph[], int curr, int target, boolean vis[], String path) {
         if (curr == target) {
             System.out.println(path);
             return;
         }
-
         vis[curr] = true;
-
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-
             if (!vis[e.dest]) {
-                printAllPath(graph, vis, e.dest, target, path + e.dest);
+                allPath(graph, e.dest, target, vis, path + "->" + e.dest);
             }
         }
-
-        vis[curr] = false; // backtracking
+        vis[curr] = false;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = 5;
         int paths[][] = { { 0, 1 }, { 0, 2 }, { 1, 3 }, { 2, 4 }, { 3, 4 } };
+
         ArrayList<Edge> graph[] = new ArrayList[n];
-        createGraph(graph, paths);
-        printAllPath(graph, new boolean[n], 0, 4, "0");
+        boolean vis[] = new boolean[n];
+        createGraph(paths, graph);
+        allPath(graph, 2, 4, vis, "2");
     }
 }
