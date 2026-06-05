@@ -17,12 +17,12 @@ public class longestConsecutiveSeq {
             }
         }
 
-        int msp = 0;// minimum start point
+        int msp = 0;// minimum start point -> 1st element of the seq
         int max = 0;// max len of cont seq
         for (int x : arr) {
             if (map.get(x) == true) {
                 int tl = 1;// temporary length
-                int tsp = x;// temp start point
+                int tsp = x;// temp 1st element
                 while (map.containsKey(tl + tsp)) {
                     tl++;
                 }
