@@ -17,8 +17,8 @@ public class longestConsecutiveSeq {
             }
         }
 
-        int msp = 0;
-        int max = 0;
+        int msp = 0;// minimum start point
+        int max = 0;// max len of cont seq
         for (int x : arr) {
             if (map.get(x) == true) {
                 int tl = 1;// temporary length
@@ -35,7 +35,7 @@ public class longestConsecutiveSeq {
         }
 
         for (int i = 0; i < max; i++) {
-            System.out.println(msp + i + " ");
+            System.out.print(msp + i + " ");
         }
     }
 }
