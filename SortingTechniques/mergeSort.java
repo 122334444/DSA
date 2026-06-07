@@ -9,7 +9,6 @@ public class mergeSort {
         int mid = (si + ei) / 2;
         Divide(arr, si, mid);
         Divide(arr, mid + 1, ei);
-
         conquer(arr, si, mid, ei);
 
     }
