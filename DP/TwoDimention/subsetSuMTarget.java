@@ -28,6 +28,7 @@ public class subsetSuMTarget {
     private static boolean subSumT(int arr[], int target) {
         int n = arr.length;
         boolean dp[][] = new boolean[n][target + 1];
+
         for (int i = 0; i < n; i++) {// base case
             dp[i][0] = true;
         }
