@@ -16,7 +16,7 @@ public class targetSumWays {
         return add + sub;// Number of all ways
     }
 
-    // Q. Given an array and a target aim is to find number of ways in whic target
+    // Q. Given an array and a target aim is to find number of ways in which target
     // can be find by only + & -
     // LeetCode 494
 }
