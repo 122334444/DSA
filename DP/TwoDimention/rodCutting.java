@@ -7,7 +7,7 @@ public class rodCutting {
 
         // Base case
         if (idx == 0) {
-            return n * price[0];
+            return n * price[0];// means cutting all part of length 1
         }
 
         if (dp[idx][n] != -1) {
