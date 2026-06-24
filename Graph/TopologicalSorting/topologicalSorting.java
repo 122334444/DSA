@@ -1,4 +1,4 @@
-package Graph;
+package Graph.TopologicalSorting;
 
 import java.lang.reflect.Array;
 import java.util.*;
