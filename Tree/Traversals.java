@@ -1,6 +1,6 @@
-package BinaryTree;
+package Tree;
 
-public class Main {
+public class Traversals {
     public static void main(String args[]) {
 
     }
