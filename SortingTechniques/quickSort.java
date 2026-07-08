@@ -16,25 +16,17 @@ public class quickSort {
         int j = high;
 
         while (i < j) {
-
-            // Move i until element greater than pivot
-            while (i <= high - 1 && arr[i] <= pivot) {
+            while (i <= high - 1 && arr[i] <= pivot) {// Move i until element greater than pivot
                 i++;
             }
-
-            // Move j until element smaller than or equal to pivot
-            while (j >= low + 1 && arr[j] > pivot) {
+            while (j >= low + 1 && arr[j] > pivot) {// Move j until element smaller than or equal to pivot
                 j--;
             }
-
             if (i < j) {
                 swap(arr, i, j);
             }
         }
-
-        // Place pivot at its correct position
-        swap(arr, low, j);
-
+        swap(arr, low, j);// Place pivot at its correct position
         return j;
     }
 
@@ -47,24 +39,16 @@ public class quickSort {
         }
     }
 
-    // Print array
-    private static void printArray(int arr[]) {
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-    }
-
     public static void main(String args[]) {
 
         int arr[] = { 4, 6, 2, 5, 7, 9, 1, 3 };
-
-        System.out.println("Before Sorting:");
-        printArray(arr);
-
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
         qs(arr, 0, arr.length - 1);
-
-        System.out.println("After Sorting:");
-        printArray(arr);
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
     }
 }
