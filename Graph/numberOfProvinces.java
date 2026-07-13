@@ -19,7 +19,6 @@ public class numberOfProvinces {
                 adj.get(i).add(isConnected[i][j]);
             }
         }
-
         return provinces(adj, v);
     }
 
