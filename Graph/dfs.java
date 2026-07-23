@@ -36,7 +36,7 @@ public class dfs {
             Edge e = graph[curr].get(i);
             if (!vis[e.dest]) {
                 dfs(n, graph, e.dest, vis);
-                vis[e.dest] = true;
+                // vis[e.dest] = true;
             }
         }
     }

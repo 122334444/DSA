@@ -26,12 +26,12 @@ public class topologicalSorting {
         }
     }
 
-    public static void topoSort(ArrayList<Edge> graph[], boolean vis[], int curr, Stack<Integer> s) {
+    public static void topoSortDFS(ArrayList<Edge> graph[], boolean vis[], int curr, Stack<Integer> s) {
         vis[curr] = true;
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
             if (!vis[e.dest]) {
-                topoSort(graph, vis, e.dest, s);
+                topoSortDFS(graph, vis, e.dest, s);
             }
         }
         s.push(curr);
@@ -45,7 +45,7 @@ public class topologicalSorting {
 
         Stack<Integer> s = new Stack<>();
         boolean vis[] = new boolean[n];
-        topoSort(graph, vis, 0, s);
+        topoSortDFS(graph, vis, 0, s);
 
         while (!s.isEmpty()) {
             System.out.print(s.pop() + " ");
