@@ -41,6 +41,26 @@ class allPossiblePathsfromSrcToTarget {
         vis[curr] = false;
     }
 
+    private void allPathV2(List<Edge> graph[], int curr, int tar, boolean vis[], List<Integer> ls,
+            List<List<Integer>> paths) {
+        vis[curr] = true;
+        ls.add(curr);
+        if (curr == tar) {
+            paths.add(new ArrayList<>(ls));
+        }
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if (!vis[e.dest]) {
+
+                allPathV2(graph, e.dest, tar, vis, ls, paths);
+
+            }
+        }
+
+        ls.remove(ls.size() - 1);
+        vis[curr] = false;
+    }
+
     public static void main(String[] args) {
         int n = 5;
         int paths[][] = { { 0, 1 }, { 0, 2 }, { 1, 3 }, { 2, 4 }, { 3, 4 } };
