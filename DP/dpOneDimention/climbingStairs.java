@@ -22,12 +22,12 @@ public class climbingStairs {
 
         if (dp[idx] != -1)
             return dp[idx];
-        int l = climbStarirRec(idx - 1, dp);
+        int l = climbStarirRec(idx - 1, dp);// not adding +1 because we are looking for number ways not steps
         int r = 0;
         if (idx > 1) {
             r = climbStarirRec(idx - 2, dp);
         }
-        return dp[idx] = (l + r);
+        return dp[idx] = (l + r);// counts all ways
     }
 
     public static void main(String args[]) {

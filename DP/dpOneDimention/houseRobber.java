@@ -12,9 +12,7 @@ public class houseRobber {
     }
 
     public static int function(int idx, int nums[], int dp[]) {
-        if (idx == 0) {
-            return nums[0];
-        }
+
         if (idx < 0)
             return 0;
 
