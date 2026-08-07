@@ -1,6 +1,7 @@
 package BinarySearch;
 
 public class SquareRootOfNumber {
+
     public static long sqRoot(long n) {
         long l = 1, r = n;
         while (l <= r) {
@@ -14,4 +15,5 @@ public class SquareRootOfNumber {
         }
         return r;
     }
+
 }
