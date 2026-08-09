@@ -18,7 +18,7 @@ public class zeroOneKnapsack {
             pick = Math.max(val[idx] + knapsack(wt, val, w - wt[idx], idx - 1, dp), pick);
         }
 
-        return Math.max(pick, notPick);
+        return dp[idx][w] = Math.max(pick, notPick);
 
     }
 
@@ -56,6 +56,6 @@ public class zeroOneKnapsack {
             Arrays.fill(dp[i], -1);
         }
         System.out.println(knapsack(wt, val, w, n - 1, dp));
-        System.out.println(knapsackTopDown(wt, val, w));
+        // System.out.println(knapsackTopDown(wt, val, w));
     }
 }
