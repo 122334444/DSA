@@ -2,7 +2,7 @@ package Tree;
 
 import java.util.*;
 
-public class levelOrderTreversal {
+public class BFS {
 
     static class Node {
         int data;
