@@ -39,4 +39,24 @@ public class BalancedTree {
         int rh = height(root.right);
         return 1 + Math.max(lh, rh);
     }
+
+    // optimal
+    public boolean isBalanced2(Node root) {
+        int a = maxDepth(root);
+        if (a == -1)
+            return false;
+        return true;
+    }
+
+    public int maxDepth(Node root) {
+        if (root == null)
+            return 0;
+        int lh = maxDepth(root.left);
+        int rh = maxDepth(root.right);
+        if (lh == -1 || rh == -1)
+            return -1;
+        if (Math.abs(lh - rh) > 1)
+            return -1;
+        return 1 + Math.max(lh, rh);
+    }
 }
