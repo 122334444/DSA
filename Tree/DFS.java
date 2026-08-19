@@ -43,4 +43,5 @@ public class DFS {
         preorder(root.right);
         System.out.print(root.data + " ");
     }
+
 }
