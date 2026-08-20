@@ -69,4 +69,8 @@ public class BoundaryTraversal {
 
         return ans;
     }
+
+    boolean isLeaf(Node root) {
+        return root.left == null && root.right == null;
+    }
 }
