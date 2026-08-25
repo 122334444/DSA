@@ -52,7 +52,7 @@ public class removeNode {
         return root;
     }
 
-    public static int max(Node root) {
+    public static int max(Node root) {// max in left side
         if (root.right != null) {
             return max(root.right);
         } else {

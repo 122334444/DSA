@@ -2,25 +2,27 @@ package BST;
 
 public class lca {
     static class Node {
-        int data;
+        int val;
         Node left;
         Node right;
 
-        public Node(int data, Node left, Node right) {
-            this.data = data;
+        public Node(int val, Node left, Node right) {
+            this.val = val;
             this.left = left;
             this.right = right;
         }
     }
 
-    public static int LCA(Node root, int a, int b) {
-        if (a < root.data && b < root.data) {
-            return LCA(root.left, a, b);
-        } else if (a > root.data && b > root.data) {
-            return LCA(root.right, a, b);
-        } else {// jab dono ke beech me root aajayega
-            return root.data;
+    public Node lowestCommonAncestor(Node root, Node p, Node q) {
+        if (root == null)
+            return null;
+        if (root.val < p.val && root.val < q.val) {
+            return lowestCommonAncestor(root.right, p, q);
         }
+        if (root.val > p.val && root.val > q.val) {
+            return lowestCommonAncestor(root.left, p, q);
+        }
+        return root;// equal case
     }
 
     public static void main(String args[]) {
@@ -31,7 +33,5 @@ public class lca {
         root.left.right = new Node(15, null, null);
         root.right.left = new Node(25, null, null);
         root.right.right = new Node(35, null, null);
-        int a = 5, b = 15;
-        System.out.println("LCA of " + a + " and " + b + " is: " + LCA(root, a, b));
     }
 }
