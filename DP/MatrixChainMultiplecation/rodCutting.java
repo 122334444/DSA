@@ -1,8 +1,10 @@
-package DP.TwoDimention;
+package DP.MatrixChainMultiplecation;
 
 import java.util.*;
 
 public class rodCutting {
+
+    // knapsack approach
     static int solve(int[] price, int n, int idx, int[][] dp) {
 
         // Base case
@@ -26,6 +28,27 @@ public class rodCutting {
         return dp[idx][n] = Math.max(pick, notPick);
     }
 
+    public static int rodCutting(int n, int price[]) {
+        int dp[] = new int[n + 1];
+        Arrays.fill(dp, -1);
+        return fxn(n, price, dp);
+    }
+
+    private static int fxn(int n, int price[], int dp[]) {
+        if (n == 0)
+            return 0;
+
+        if (dp[n] != -1) {
+            return dp[n];
+        }
+
+        int max = 0;
+        for (int i = 1; i <= n; i++) {
+            max = Math.max(max, price[i - 1] + fxn(n - i, price, dp));// rod lenth change
+        }
+        return dp[n] = max;
+    }
+
     public static void main(String args[]) {
         int price[] = { 3, 5, 8, 9, 10, 17, 17, 20 };
 
@@ -37,5 +60,6 @@ public class rodCutting {
         }
 
         System.out.println(solve(price, n, n - 1, dp));
+        System.out.println(rodCutting(n, price));
     }
 }
