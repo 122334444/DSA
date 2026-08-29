@@ -2,7 +2,7 @@ package Tree;
 
 import java.util.*;
 
-public class BFS {
+public class LeveOrderTraversalORBFS {
 
     static class Node {
         int data;
