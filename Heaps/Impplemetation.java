@@ -1,9 +1,9 @@
-package HashMap;
+package Heaps;
 
+import java.util.LinkedList;
 import java.util.ArrayList;
 
-public class Implemetation {
-
+public class Impplemetation {
     static class HashMap<K, V> {
         private class Node {
             K key;
@@ -149,7 +149,4 @@ public class Implemetation {
         }
     }
 
-    public static void main(String args[]) {
-
-    }
 }
