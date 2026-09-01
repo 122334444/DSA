@@ -14,6 +14,13 @@ public class remove {
         }
     }
 
+    public static Node removeFirst(Node head) {
+        if (head == null)
+            return null;
+
+        return head.next;
+    }
+
     public static void removeLast(Node head) {
         if (head == null) {
             return;
@@ -59,8 +66,8 @@ public class remove {
         head.next.next.next.next = new Node(5);
         head.next.next.next.next.next = new Node(6);
         // removeLast(head);
-        removeIdx(head, 2);
-        Node curr = head;
+        Node newHead = removeFirst(head);
+        Node curr = newHead;
         while (curr != null) {
             System.out.print(curr.data + " ");
             curr = curr.next;

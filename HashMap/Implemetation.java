@@ -2,6 +2,8 @@ package HashMap;
 
 import java.util.ArrayList;
 
+import java.util.LinkedList;
+
 public class Implemetation {
 
     static class HashMap<K, V> {
@@ -147,9 +149,5 @@ public class Implemetation {
         for (int i = 0; i < keys.size(); i++) {
             System.out.print(keys.get(i) + " ");
         }
-    }
-
-    public static void main(String args[]) {
-
     }
 }
