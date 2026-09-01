@@ -1,4 +1,4 @@
-package Graph;
+package Graph.MST;
 
 //MINIMUM SPANNING TREE(Prims Algorithm)
 import java.util.*;
@@ -38,7 +38,7 @@ public class mstPrimsAlgo {
         }
     }
 
-    public static void primsAlgo(ArrayList<Edge> graph[], int n) {
+    public static void primsAlgo(ArrayList<Edge> graph[], int n) {/// cost of minimum spanng tree
         boolean vis[] = new boolean[n];
         PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> a.wt - b.wt);// ensures minimum weight edge is always at
                                                                             // the top
