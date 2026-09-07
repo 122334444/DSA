@@ -1,5 +1,6 @@
 
 import java.util.*;
+//leetcode : 940
 
 class DistinctSubsequences {
 
@@ -10,7 +11,7 @@ class DistinctSubsequences {
         int dp[] = new int[n + 1];
         dp[0] = 1;
 
-        Map<Character, Integer> map = new HashMap<>();//to trck last occurance
+        Map<Character, Integer> map = new HashMap<>();//to trck last occurance 
         for (int i = 1; i <= n; i++) {
 
             dp[i] = (2 * dp[i - 1]) % MOD;
