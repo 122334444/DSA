@@ -1,20 +1,21 @@
 
 import java.util.*;
+//Leetcode 127
 
-class WordLaderI {
+public class WordLaderI {
 
-    class Pair {
+    static class Pair {
 
         String first;
         int second;
 
-        Pair(String first, int second) {
+        public Pair(String first, int second) {
             this.first = first;
             this.second = second;
         }
     }
 
-    public int ladderLength(String st, String end, List<String> list) {
+    public static int ladderLength(String st, String end, List<String> list) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(st, 1));
         Set<String> set = new HashSet<>();
@@ -49,5 +50,20 @@ class WordLaderI {
 
     public static void main(String args[]) {
 
+        String beginWord = "hit";
+        String endWord = "cog";
+
+        List<String> wordList = Arrays.asList(
+                "hot",
+                "dot",
+                "dog",
+                "lot",
+                "log",
+                "cog"
+        );
+
+        int answer = ladderLength(beginWord, endWord, wordList);
+
+        System.out.println("Shortest transformation length = " + answer);
     }
 }
