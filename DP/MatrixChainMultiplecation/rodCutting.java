@@ -22,7 +22,9 @@ public class rodCutting {
         int rodLength = idx + 1;
 
         if (rodLength <= n) {
-            pick = price[idx] + solve(price, n - rodLength, idx, dp);/// change in rod length ->
+            pick = price[idx] + solve(price, n - rodLength, idx, dp);
+        
+        /// change in rod length ->
         }
 
         return dp[idx][n] = Math.max(pick, notPick);
@@ -34,9 +36,11 @@ public class rodCutting {
         return fxn(n, price, dp);
     }
 
+    //MCM method 
     private static int fxn(int n, int price[], int dp[]) {
-        if (n == 0)
+        if (n == 0) {
             return 0;
+        }
 
         if (dp[n] != -1) {
             return dp[n];
@@ -50,7 +54,7 @@ public class rodCutting {
     }
 
     public static void main(String args[]) {
-        int price[] = { 3, 5, 8, 9, 10, 17, 17, 20 };
+        int price[] = {3, 5, 8, 9, 10, 17, 17, 20};
 
         int n = price.length;// length of rod
         int dp[][] = new int[n][n + 1];
