@@ -3,6 +3,7 @@ package DP.dpOneDimention;
 import java.util.Arrays;
 
 public class FrogJumpWithKDistance {
+
     public int frogJump(int[] heights, int k) {
         int n = heights.length;
         int dp[] = new int[n];
@@ -10,12 +11,16 @@ public class FrogJumpWithKDistance {
         return solve(n - 1, heights, k, dp);
     }
 
+    /// MCM kind of
+
     private int solve(int idx, int heights[], int k, int dp[]) {
 
-        if (idx == 0)
+        if (idx == 0) {
             return 0;
-        if (dp[idx] != -1)
+        }
+        if (dp[idx] != -1) {
             return dp[idx];
+        }
 
         int cost = Integer.MAX_VALUE;
         for (int i = 1; i <= k && idx - i >= 0; i++) {
