@@ -19,7 +19,7 @@ public class powerXn {
         return ans;
     }
 
-    public static void main(String argsp[]) {
+    public static void main(String args[]) {
         int x = 5;
         int n = 12;
         System.out.println(pow(x, n));
