@@ -10,7 +10,7 @@ public class powerXn {
                 ans = ans * x;
                 nn--;
             } else {
-                x = x * x;// ek ko multiply karke nn ko even bna idya
+                x = x * x;// ek ko multiply karke nn ko even bna diya
                 nn = nn / 2;
             }
         }
